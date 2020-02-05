@@ -2,6 +2,7 @@ package test.logic;
 
 import static org.junit.Assert.*;
 import model.logic.Modelo;
+import model.vo.Infraccion;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,12 +14,12 @@ public class TestModelo {
 	
 	@Before
 	public void setUp1() {
-		modelo= new Modelo(CAPACIDAD);
+		modelo= new Modelo();
 	}
 
 	public void setUp2() {
 		for(int i =0; i< CAPACIDAD;i++){
-			modelo.agregar(""+i);
+			modelo.agregar(new Infraccion());
 		}
 	}
 
