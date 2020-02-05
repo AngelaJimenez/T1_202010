@@ -27,6 +27,8 @@ public class TestArregloDinamico {
 	@Test
 	public void testArregloDinamico() {
 		// TODO
+		assertNotNull(arreglo);
+		assertEquals(0, arreglo.darLongitud());
 	}
 
 	@Test

@@ -31,25 +31,33 @@ public class TestModelo {
 
 	@Test
 	public void testDarTamano() {
-		// TODO
+		// TOD
+		setUp2();
+		assertEquals(100, modelo.darTamano());
 	}
 
 	@Test
 	public void testAgregar() {
 		// TODO Completar la prueba
+		Infraccion in = new Infraccion();
+		in.setObjectId("Id1");
+		modelo.agregar(in);
+		assertEquals(1, modelo.darTamano());
 	}
 
 	@Test
 	public void testBuscar() {
-		setUp2();
-		// TODO Completar la prueba
+		Infraccion in = new Infraccion();
+		in.setObjectId("Id1");
+		modelo.agregar(in);
+		assertNotNull(modelo.buscar(in));
 	}
 
 	@Test
 	public void testEliminar() {
 		setUp2();
 		// TODO Completar la prueba
-		
+		return;
 	}
 
 }
